@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const server = app.listen(5000);
+const server = app.listen(7777);
 
 app.get('*', (req, res) => {
     res.send('API working');
