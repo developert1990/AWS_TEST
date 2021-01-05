@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/second-route', (req, res) => {
-    res.send('second route working fine');
+    res.send('second route fine');
 });
 
 module.exports = {
