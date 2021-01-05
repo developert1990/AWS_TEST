@@ -6,6 +6,19 @@ app.get('*', (req, res) => {
     res.send('API working fine');
 });
 
+app.get('*', (req, res) => {
+    res.send('API working fine');
+});
+app.get('*', (req, res) => {
+    res.send('API working fine');
+});
+app.get('*', (req, res) => {
+    res.send('API working fine');
+});
+app.get('*', (req, res) => {
+    res.send('API working fine');
+});
+
 module.exports = {
     server,
 }
