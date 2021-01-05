@@ -10,6 +10,10 @@ app.get('/second-route', (req, res) => {
     res.send('second route fine');
 });
 
+app.get('/third-route', (req, res) => {
+    res.send('second route fine');
+});
+
 module.exports = {
     server,
 }
