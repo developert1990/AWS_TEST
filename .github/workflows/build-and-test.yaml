@@ -1,9 +1,6 @@
 name: Node.js CI
 # 이 on 행동을 했을 경우에 아래 jobs trigger 가 시작된다.
-on:
-  pull_request:
-    branches:
-      - master
+on: [pull_request]
 
 jobs:
   build-and-test: # 내가 알아서 정할 수 있음 (이름)
@@ -29,3 +26,4 @@ jobs:
     - run: npm test
       env: # 환경변수
         CI: true # 보통 CI라는 환경변수가 정해져있으면 CI환경에 맞게 최적화 해주기 위해서 사용해줬다.
+        
