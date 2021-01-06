@@ -1,0 +1,28 @@
+name: Node.js CI
+# 이 on 행동을 했을 경우에 아래 jobs trigger 가 시작된다.
+on: [push]
+
+jobs:
+  build-and-test: # 내가 알아서 정할 수 있음 (이름)
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.18]
+
+    steps:
+          
+    - uses: actions/checkout@v2 # git clone 하는 action 예를 들어서 npm 에서 install 하는거랑 비슷
+
+    - name: Use Node.js ${{ matrix.node-version }}
+          # npm install / 패키지이름 github action에서 사용하기 때문에 actions/ 
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - run: npm install
+    # - run: npm run build --if-present
+    - run: npm test
+      env: # 환경변수
+        CI: true # 보통 CI라는 환경변수가 정해져있으면 CI환경에 맞게 최적화 해주기 위해서 사용해줬다.
