@@ -18,10 +18,6 @@ app.get('/fourth-route', (req, res) => {
     res.send('second route fine');
 });
 
-app.get('/fifth-route', (req, res) => {
-    res.send('second route fine');
-});
-
 module.exports = {
     server,
 }
