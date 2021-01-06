@@ -1,6 +1,9 @@
 name: Node.js CI
 # 이 on 행동을 했을 경우에 아래 jobs trigger 가 시작된다.
-on: [push]
+on:
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build-and-test: # 내가 알아서 정할 수 있음 (이름)
